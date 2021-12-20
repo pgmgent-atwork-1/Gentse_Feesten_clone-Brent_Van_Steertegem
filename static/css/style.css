@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Entire page */
+body {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    /*line-height: 1.5;*/
+    margin: 0;
+}
+@media (min-width:520px){
+    body {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+}
+
+header, main, footer > *, footer > div:nth-of-type(2) > div {
+    max-width: 27rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+@media (min-width:520px){
+    header, main, footer > *, footer > div:nth-of-type(2) > div {
+        max-width: 30rem;
+        padding: 0 1rem;
+    }
+}
+@media (min-width:720px){
+    header, main, footer > *, footer > div:nth-of-type(2) > div {
+        max-width: 43rem;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+@media (min-width:520px){
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+a {
+    color: black;
+}
+
+/* Header */
+/*div {
+    background-image: url("../media/img/header_01.jpg");
+    width: 100%;
+    max-height: 90vh;
+}
+*/
+
+/* footer */
+@media (min-width:720px){
+    footer > div:first-of-type, form {
+        max-width: 34rem;
+    }
+}
+
+
+footer > form section {
+    margin-top: 1rem;
+}
+@media (min-width:520px){
+    footer > form section {
+        flex-direction: row;
+        gap: 0;
+        margin-top: 0.3rem;
+    }
+}
+@media (min-width:720px){
+    footer > form section {
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+footer > form section > * {
+    height: 4.5rem;
+}
+@media (min-width:520px){
+    footer > form section > * {
+        height: 2.4rem;
+    }
+}
+@media (min-width:720px){
+    footer > form section > * {
+        height: 3rem;
+    }
+}
+
+input[type="email"] {
+    width: 100%;
+    background-color: #e9e9e9;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="submit"] {
+    font-size: inherit;
+    width: fit-content;
+    padding: 0 2rem;
+    background-color: black;
+    color: white;
+    border: 0;
+}
+
+footer > div:nth-of-type(2) {
+    background-image: url("../media/img/header_01.jpg");
+    background-size: 450%;
+    background-position: -43rem -4.1rem;
+    color: white;
+    max-width: 100%;
+    font-size: 1.9rem;
+    margin-top: 5rem;
+    padding: 0;
+    padding-bottom: 2rem;
+}
+@media (min-width:520px){
+    footer > div:nth-of-type(2) {
+        background-size: 200%;
+        background-position: -12.7rem -0.5rem;
+        margin-top: 3.5rem;
+        padding-bottom: 0.6rem;
+    }
+}
+@media (min-width:720px){
+    footer > div:nth-of-type(2) {
+        background-size: 160%;
+        background-position: -11.6rem 0rem;
+    }
+}
+
+footer > div:nth-of-type(2) > div > img {
+    width: 18rem;
+}
+@media (min-width:520px){
+    footer > div:nth-of-type(2) > div > img {
+        width: 7rem;
+    }
+}
+
+footer > div:nth-of-type(2) > div p {
+    margin: 13rem 0 4rem 0;
+    line-height: 1.1;
+    font-weight: bold;
+}
+@media (min-width:520px){
+    footer > div:nth-of-type(2) > div p {
+        max-width: 67%;
+        font-size: 0.9rem;
+        margin-top: 7.5rem;
+        margin-bottom: 2rem;
+    }
+}
+@media (min-width:720px){
+    footer > div:nth-of-type(2) > div p {
+        max-width: 50%;
+        font-size: 1.1rem;
+        margin-top: 8.9rem;
+    }
+}
+
+footer > div:nth-of-type(2) section{
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+section > a {
+    color: transparent;
+}
+
+section > a img {
+    background: white;
+    border: 0.7rem solid white;
+    border-radius: 2rem;
+}
+@media (min-width: 520px){
+    section > a img {
+        border: 0;
+        width: 1.7rem;
+    }
+}
+
+@media (min-width: 720px){
+    section > a img {
+        width: 2rem;
+    }
+}
