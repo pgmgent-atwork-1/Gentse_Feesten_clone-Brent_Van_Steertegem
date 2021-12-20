@@ -21,7 +21,7 @@ body {
     /*line-height: 1.5;*/
     margin: 0;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     body {
         font-size: 0.8rem;
         line-height: 1.5;
@@ -33,15 +33,10 @@ header, main, footer > *, footer > div:nth-of-type(2) > div {
     margin: 0 auto;
     padding: 0 2rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     header, main, footer > *, footer > div:nth-of-type(2) > div {
-        max-width: 30rem;
+        max-width: 85rem;
         padding: 0 1rem;
-    }
-}
-@media (min-width:720px){
-    header, main, footer > *, footer > div:nth-of-type(2) > div {
-        max-width: 43rem;
     }
 }
 
@@ -54,7 +49,7 @@ section {
 h1 {
     font-size: 2.5rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     h1 {
         font-size: 1.3rem;
     }
@@ -73,9 +68,9 @@ a {
 */
 
 /* footer */
-@media (min-width:720px){
+@media (min-width:45rem){
     footer > div:first-of-type, form {
-        max-width: 34rem;
+        max-width: 35rem;
     }
 }
 
@@ -83,29 +78,23 @@ a {
 footer > form section {
     margin-top: 1rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     footer > form section {
         flex-direction: row;
         gap: 0;
         margin-top: 0.3rem;
     }
 }
-@media (min-width:720px){
-    footer > form section {
-        flex-direction: row;
-        gap: 0;
-    }
-}
 
 footer > form section > * {
     height: 4.5rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     footer > form section > * {
         height: 2.4rem;
     }
 }
-@media (min-width:720px){
+@media (min-width:45rem){
     footer > form section > * {
         height: 3rem;
     }
@@ -130,6 +119,8 @@ input[type="submit"] {
 
 footer > div:nth-of-type(2) {
     background-image: url("../media/img/header_01.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
     background-size: 450%;
     background-position: -43rem -4.1rem;
     color: white;
@@ -139,25 +130,30 @@ footer > div:nth-of-type(2) {
     padding: 0;
     padding-bottom: 2rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     footer > div:nth-of-type(2) {
-        background-size: 200%;
+        background-size: 65rem; /* 200% */
         background-position: -12.7rem -0.5rem;
         margin-top: 3.5rem;
         padding-bottom: 0.6rem;
     }
 }
-@media (min-width:720px){
+@media (min-width:45rem){
     footer > div:nth-of-type(2) {
-        background-size: 160%;
+        background-size: 72rem; /* 160% */
         background-position: -11.6rem 0rem;
+    }
+}
+@media (min-width:85rem){
+    footer > div:nth-of-type(2) {
+        background-position: center;
     }
 }
 
 footer > div:nth-of-type(2) > div > img {
     width: 18rem;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     footer > div:nth-of-type(2) > div > img {
         width: 7rem;
     }
@@ -168,7 +164,7 @@ footer > div:nth-of-type(2) > div p {
     line-height: 1.1;
     font-weight: bold;
 }
-@media (min-width:520px){
+@media (min-width:32rem){
     footer > div:nth-of-type(2) > div p {
         max-width: 67%;
         font-size: 0.9rem;
@@ -176,7 +172,7 @@ footer > div:nth-of-type(2) > div p {
         margin-bottom: 2rem;
     }
 }
-@media (min-width:720px){
+@media (min-width:45rem){
     footer > div:nth-of-type(2) > div p {
         max-width: 50%;
         font-size: 1.1rem;
@@ -198,14 +194,14 @@ section > a img {
     border: 0.7rem solid white;
     border-radius: 2rem;
 }
-@media (min-width: 520px){
+@media (min-width: 32rem){
     section > a img {
         border: 0;
         width: 1.7rem;
     }
 }
 
-@media (min-width: 720px){
+@media (min-width: 45rem){
     section > a img {
         width: 2rem;
     }
