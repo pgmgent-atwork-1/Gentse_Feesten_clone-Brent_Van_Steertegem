@@ -28,6 +28,7 @@ body {
 }
 
 section {
+    margin-top: 0.38rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -36,22 +37,25 @@ section {
 h1 {
     font-size: 1.88rem;
     line-height: 1.5;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1.3rem auto;
 }
 @media (min-width:36rem){
     h1 {
         font-size: 1.88rem;
+        margin-bottom: 0.9rem;
     }
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.16rem;
     line-height: 1.4rem;
-    margin: 0 auto 2.3rem auto;
+    margin: 0 auto 1.9rem auto;
 }
 @media (min-width:36rem){
     p {
         line-height: 1.75rem;
+        font-size: 1.2rem;
+        margin-bottom: 1.65rem;
     }
 }
 
@@ -76,8 +80,12 @@ a {
 /* footer */
 
 form.container {
-    padding-bottom: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
+}
+@media (min-width:36rem){
+    form.container {
+        margin-bottom: 5rem;
+    }
 }
 
 footer > div:first-of-type, form.container {
@@ -94,21 +102,15 @@ footer > div:first-of-type, form.container {
 footer > form section > * {
     height: 3.5rem;
 }
-@media (min-width:36rem){
-    footer > form section > * {
-        height: 3.5rem;
-    }
-}
-@media (min-width:45rem){
-    footer > form section > * {
-        height: 3rem;
-    }
-}
 
 label {
     margin-bottom: .38rem;
     line-height: 1.65;
     font-size: 1rem;
+}@media (min-width:48rem){
+    label {
+        font-size: 1.06rem;
+    }
 }
 
 input[type="email"] {
@@ -150,15 +152,28 @@ footer > div:nth-of-type(2) > div > img {
     padding: 2.25rem;
     background-color: white;
 }
+@media (min-width:48rem){
+    footer > div:nth-of-type(2) > div > img {
+        width: 17.5rem;
+    }
+}
 
 footer > div:nth-of-type(2) > div p {
     margin: 7rem 0 3rem 0;
     line-height: 1.5rem;
     font-weight: bold;
     font-size: 1.25rem;
-    max-width: 28rem;
+    max-width: 29rem;
 }
+@media (min-width:48rem){
+    footer > div:nth-of-type(2) > div p {
+        font-size: 1.5rem;
+        margin-top: 4rem;
+    }
+}
+
 footer > div:nth-of-type(2) section{
+    margin-top: 0;
     flex-direction: row;
     gap: 0.7rem;
 }
