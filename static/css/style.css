@@ -16,7 +16,6 @@
 /* Entire page */
 body {
     font-family: "Raleway", Arial, Helvetica, sans-serif;
-    /* font-size: 1rem; */
     line-height: 1.75;
     margin: 0;
 }
@@ -25,6 +24,11 @@ body {
         font-size: 0.8rem;
         line-height: 1.5;
     }
+}
+
+body *::selection {
+    background-color: black;
+    color: white;
 }
 
 section {
@@ -45,6 +49,12 @@ h1 {
         margin-bottom: 0.9rem;
     }
 }
+@media (min-width:80rem){
+    h1 {
+        font-size: 3rem;
+    }
+}
+
 
 p {
     font-size: 1.16rem;
@@ -54,7 +64,6 @@ p {
 @media (min-width:36rem){
     p {
         line-height: 1.75rem;
-        font-size: 1.2rem;
         margin-bottom: 1.65rem;
     }
 }
@@ -64,7 +73,7 @@ a {
 }
 
 .container {
-    max-width: 85rem;
+    max-width: 87.5rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -78,6 +87,9 @@ a {
 */
 
 /* footer */
+footer .container {
+    max-width: 80rem;;
+}
 
 form.container {
     margin-bottom: 4rem;
@@ -89,7 +101,12 @@ form.container {
 }
 
 footer > div:first-of-type, form.container {
-    max-width: 50rem;
+    max-width: 47rem;
+}
+@media (min-width:64rem) {
+    footer > div:first-of-type, form.container {
+        max-width: 50rem;
+    }
 }
 
 @media (min-width:36rem){
@@ -118,7 +135,13 @@ input[type="email"] {
     background-color: #e9e9e9;
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
+    font-size: 1.13rem;
+}
+
+input[type="email"]:focus-visible {
+    outline: 2px dotted red;
+    outline-offset: -2px;
 }
 
 input[type="submit"] {
@@ -128,22 +151,33 @@ input[type="submit"] {
     background-color: black;
     color: white;
     border: 0.19rem solid black;
+    transition: ease-in 0.2s;
+}
+
+input[type="submit"]:hover {
+    border: 3px solid black;
+    color: black;
+    background-color: white;
 }
 
 footer > div:nth-of-type(2) {
+    height: 22rem;
+    background-size: cover;
     background-image: url("../media/img/header_01.jpg");
     background-repeat: no-repeat;
     background-color: black;
-    background-size: 93.2rem;
-    background-position-x: 40.8%;
-    background-position-y: 0rem;
+    background-position: center;
     color: white;
     max-width: 100%;
     height: 27.5rem;
 }
-@media (min-width:85rem){
+
+@media (min-width:80rem){
     footer > div:nth-of-type(2) {
-        background-position: center;
+        height: 40rem;
+        /* background-size: 136rem; */
+        background-position-x: -40%;
+        /* background-position-x: center; */
     }
 }
 
@@ -169,6 +203,15 @@ footer > div:nth-of-type(2) > div p {
     footer > div:nth-of-type(2) > div p {
         font-size: 1.5rem;
         margin-top: 4rem;
+    }
+}
+@media (min-width:80rem){
+    footer > div:nth-of-type(2) > div p {
+        font-size: 1.88rem;
+        margin-top: 7.6rem;
+        line-height: 1.36;
+        font-weight: normal;
+        margin-bottom: 2.5rem;
     }
 }
 
