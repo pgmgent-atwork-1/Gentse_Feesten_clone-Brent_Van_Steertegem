@@ -69,7 +69,12 @@ p {
 }
 
 a {
-    color: black;
+    color: inherit;
+}
+
+a:focus {
+    outline: 2px dotted red;
+    outline-offset: -2px;
 }
 
 .container {
@@ -79,12 +84,86 @@ a {
 }
 
 /* Header */
-/*div {
-    background-image: url("../media/img/header_01.jpg");
-    width: 100%;
-    max-height: 90vh;
+header > div {
+    background-color: black;
+    background: url("../media/img/header_01.jpg"); 
+    background-position: 35% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh; 
 }
-*/
+
+header > div > img {
+    filter: brightness(0);
+}
+
+header > div > img:first-of-type {width: 7rem;}
+
+header > div > img:nth-of-type(2) {
+    width: 16rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-between;
+}
+
+header li {
+    color: white;
+    width: calc(100vw / 5.2);
+    height: calc(100vw / 5.1);
+}
+@media (min-width:48rem){
+    header li {
+        width: calc(100vw / 10.3);
+        height: calc(100vw / 10.1);
+    }
+}
+
+header li:hover {
+    background-color: white;
+    color: black;
+}
+
+header li > a {
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header li > a > span {
+    text-align: center;
+    font-size: 1.13rem;
+    line-height: 1.4;
+}
+@media (min-width:36rem){
+    header li > a > span {
+        font-size: 1.63rem;
+        line-height: 1.7;
+    }
+}
+
+header li > a > span:first-of-type {
+    font-weight: bold;
+}
+
+header li > a > span:nth-of-type(2) {
+    font-size: 0.82rem;
+}
+@media (min-width:36rem){
+    header li > a > span:nth-of-type(2) {
+        font-size: 1.13rem;
+    }
+}
+
 
 /* footer */
 footer .container {
@@ -166,7 +245,7 @@ footer > div:nth-of-type(2) {
     background-image: url("../media/img/header_01.jpg");
     background-repeat: no-repeat;
     background-color: black;
-    background-position: center;
+    background-position: 40% center;
     color: white;
     max-width: 100%;
     height: 27.5rem;
@@ -175,9 +254,7 @@ footer > div:nth-of-type(2) {
 @media (min-width:80rem){
     footer > div:nth-of-type(2) {
         height: 40rem;
-        /* background-size: 136rem; */
         background-position-x: -40%;
-        /* background-position-x: center; */
     }
 }
 
