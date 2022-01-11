@@ -55,7 +55,6 @@ h1 {
     }
 }
 
-
 p {
     font-size: 1.16rem;
     line-height: 1.4rem;
@@ -83,27 +82,93 @@ a:focus {
     padding: 0 1.5rem;
 }
 
+.logo {
+    width: fit-content;
+}
+
+.logo img {
+    width: 11.25rem;
+    margin-bottom: -0.21rem;
+}
+@media (min-width:48rem){
+    .logo img {
+        width: 17.5rem;
+        height: 6.63rem;
+    }
+}
+
+
 /* Header */
-header > div {
+header > div:first-of-type {
     background-color: black;
-    background: url("../media/img/header_01.jpg"); 
+    background-image: url("../media/img/header_01.jpg"); 
     background-position: 35% center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 75vh; 
 }
-
-header > div > img {
-    filter: brightness(0);
+@media (min-width: 80rem) {
+    header > div:first-of-type {
+        position: relative;
+        height: 90vh;
+    }
 }
 
-header > div > img:first-of-type {width: 7rem;}
+header section.logo, header .container {
+    margin: 0;
+    padding: 1.5rem;
+}
 
-header > div > img:nth-of-type(2) {
+section.logo img {
+    margin-bottom: -0.55rem;
+}
+
+@media (min-width: 80rem) {
+    header > div:nth-of-type(2) {
+        position: absolute;
+        top: 13rem;
+        right: 0;
+    }
+}
+
+header > div:nth-of-type(2) > img{
+    filter: brightness(0);
+    display: block;
+}
+@media (min-width: 80rem) {
+    header > div:nth-of-type(2) > img{
+        filter: brightness(1);
+        display: inline;
+    }
+}
+
+header > div:nth-of-type(2) > img:first-of-type {
+    width: 7rem;
+    margin-bottom: 0.63rem;
+}
+@media (min-width: 80rem) {
+    header > div:nth-of-type(2) > img:first-of-type {
+        width: 7.06rem;
+        transform: rotate(-90deg);
+        margin-right: -1.5rem;
+        margin-bottom: 2.75rem;
+    }
+}
+
+header > div:nth-of-type(2) img:nth-of-type(2) {
     width: 16rem;
 }
+@media (min-width: 80rem) {
+    header > div:nth-of-type(2) img:nth-of-type(2) {
+        width: 25rem;
+        filter: invert(1);
+        margin-top: 2.06rem;
+    }
+}
 
-header ul {
+
+/* main */
+ul {
     list-style: none;
     display: flex;
     padding: 0;
@@ -114,24 +179,24 @@ header ul {
     justify-content: space-between;
 }
 
-header li {
+li {
     color: white;
     width: calc(100vw / 5.2);
     height: calc(100vw / 5.1);
 }
 @media (min-width:48rem){
-    header li {
+    li {
         width: calc(100vw / 10.3);
         height: calc(100vw / 10.1);
     }
 }
 
-header li:hover {
+li:hover {
     background-color: white;
     color: black;
 }
 
-header li > a {
+li > a {
     text-decoration: none;
     height: inherit;
     display: flex;
@@ -139,34 +204,34 @@ header li > a {
     justify-content: center;
 }
 
-header li > a > span {
+li > a > span {
     text-align: center;
     font-size: 1.13rem;
     line-height: 1.4;
 }
 @media (min-width:36rem){
-    header li > a > span {
+    li > a > span {
         font-size: 1.63rem;
         line-height: 1.7;
     }
 }
 
-header li > a > span:first-of-type {
+li > a > span:first-of-type {
     font-weight: bold;
 }
 
-header li > a > span:nth-of-type(2) {
+li > a > span:nth-of-type(2) {
     font-size: 0.82rem;
 }
 @media (min-width:36rem){
-    header li > a > span:nth-of-type(2) {
+    li > a > span:nth-of-type(2) {
         font-size: 1.13rem;
     }
 }
 
 
 /* footer */
-footer .container {
+footer.container {
     max-width: 80rem;;
 }
 
@@ -240,7 +305,6 @@ input[type="submit"]:hover {
 }
 
 footer > div:nth-of-type(2) {
-    height: 22rem;
     background-size: cover;
     background-image: url("../media/img/header_01.jpg");
     background-repeat: no-repeat;
@@ -258,20 +322,14 @@ footer > div:nth-of-type(2) {
     }
 }
 
-footer > div:nth-of-type(2) > div > img {
-    width: 11.25rem;
+footer .logo {
     padding: 2.25rem;
     background-color: white;
-}
-@media (min-width:48rem){
-    footer > div:nth-of-type(2) > div > img {
-        width: 17.5rem;
-    }
 }
 
 footer > div:nth-of-type(2) > div p {
     margin: 7rem 0 3rem 0;
-    line-height: 1.5rem;
+    line-height: 1.88rem;
     font-weight: bold;
     font-size: 1.25rem;
     max-width: 29rem;
@@ -279,7 +337,7 @@ footer > div:nth-of-type(2) > div p {
 @media (min-width:48rem){
     footer > div:nth-of-type(2) > div p {
         font-size: 1.5rem;
-        margin-top: 4rem;
+        margin-top: 5rem;
     }
 }
 @media (min-width:80rem){
@@ -298,11 +356,11 @@ footer > div:nth-of-type(2) section{
     gap: 0.7rem;
 }
 
-section > a {
+footer section > a {
     color: transparent;
 }
 
-section > a img {
+footer section > a img {
     background: white;
     border-radius: 2rem;
     width: 2.5rem;
