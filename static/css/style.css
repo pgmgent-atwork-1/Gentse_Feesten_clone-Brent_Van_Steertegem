@@ -1,367 +1,428 @@
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
-        url('../fonts/Raleway-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+      url('../fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: "Raleway";
-    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
-        url('../fonts/Raleway-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+      url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 /* Entire page */
 body {
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
-    line-height: 1.75;
-    margin: 0;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  line-height: 1.75;
+  margin: 0;
 }
 @media (min-width:36rem){
-    body {
-        font-size: 0.8rem;
-        line-height: 1.5;
-    }
+  body {
+      font-size: 0.8rem;
+      line-height: 1.5;
+  }
 }
 
 body *::selection {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 section {
-    margin-top: 0.38rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  margin-top: 0.38rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 h1 {
-    font-size: 1.88rem;
-    line-height: 1.5;
-    margin: 0 auto 1.3rem auto;
+  font-size: 1.88rem;
+  line-height: 1.5;
+  margin: 0 auto 1.3rem auto;
 }
 @media (min-width:36rem){
-    h1 {
-        font-size: 1.88rem;
-        margin-bottom: 0.9rem;
-    }
+  h1 {
+      font-size: 1.88rem;
+      margin-bottom: 0.9rem;
+  }
 }
 @media (min-width:80rem){
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+      font-size: 3rem;
+  }
 }
 
 p {
-    font-size: 1.16rem;
-    line-height: 1.4rem;
-    margin: 0 auto 1.9rem auto;
+  font-size: 1.16rem;
+  line-height: 1.4rem;
+  margin: 0 auto 1.9rem auto;
 }
 @media (min-width:36rem){
-    p {
-        line-height: 1.75rem;
-        margin-bottom: 1.65rem;
-    }
+  p {
+      line-height: 1.75rem;
+      margin-bottom: 1.65rem;
+  }
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 a:focus {
-    outline: 2px dotted red;
-    outline-offset: -2px;
+  outline: 2px dotted red;
+  outline-offset: -2px;
 }
 
 .container {
-    max-width: 87.5rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .logo {
-    width: fit-content;
+  width: fit-content;
 }
 
 .logo img {
-    width: 11.25rem;
-    margin-bottom: -0.21rem;
+  width: 11.25rem;
+  margin-bottom: -0.21rem;
 }
 @media (min-width:48rem){
-    .logo img {
-        width: 17.5rem;
-        height: 6.63rem;
-    }
+  .logo img {
+      width: 17.5rem;
+      height: 6.63rem;
+  }
 }
 
 
 /* Header */
+header {position: relative;}
+
 header > div:first-of-type {
-    background-color: black;
-    background-image: url("../media/img/header_01.jpg"); 
-    background-position: 35% center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 75vh; 
+  background-color: black;
+  background-image: url("../media/img/header_01.jpg"); 
+  background-position: 35% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
 }
 @media (min-width: 80rem) {
-    header > div:first-of-type {
-        position: relative;
-        height: 90vh;
-    }
+  header > div:first-of-type {
+      position: relative;
+      height: 90vh;
+  }
 }
 
 header section.logo, header .container {
-    margin: 0;
-    padding: 1.5rem;
+  margin: 0;
+  padding: 1.5rem;
 }
 
 section.logo img {
-    margin-bottom: -0.55rem;
+  margin-bottom: -0.55rem;
 }
 
 @media (min-width: 80rem) {
-    header > div:nth-of-type(2) {
-        position: absolute;
-        top: 13rem;
-        right: 0;
-    }
+  header > div:nth-of-type(2) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+  }
 }
 
 header > div:nth-of-type(2) > img{
-    filter: brightness(0);
-    display: block;
+  filter: brightness(0);
+  display: block;
 }
 @media (min-width: 80rem) {
-    header > div:nth-of-type(2) > img{
-        filter: brightness(1);
-        display: inline;
-    }
+  header > div:nth-of-type(2) > img{
+      filter: brightness(1);
+      display: inline;
+  }
 }
 
 header > div:nth-of-type(2) > img:first-of-type {
-    width: 7rem;
-    margin-bottom: 0.63rem;
+  width: 7rem;
+  margin-bottom: 0.63rem;
 }
 @media (min-width: 80rem) {
+  header > div:nth-of-type(2) > img:first-of-type {
+    width: 7.06rem;
+    transform: rotate(-90deg);
+    margin-right: -1.5rem;
+    margin-bottom: 2.75rem;
+    position: absolute;
+    bottom: 16rem;
+    right: 28.6rem;
+  }
+  @media (min-width: 56.31rem) {
     header > div:nth-of-type(2) > img:first-of-type {
-        width: 7.06rem;
-        transform: rotate(-90deg);
-        margin-right: -1.5rem;
-        margin-bottom: 2.75rem;
+      bottom: 16rem;
+      right: 28.6rem;
     }
+    @media (min-height: 56.31rem) {
+      header > div:nth-of-type(2) img:first-of-type {
+        bottom: 32.13rem;
+        right: 26.8rem;
+      }
+    }
+  }
 }
 
 header > div:nth-of-type(2) img:nth-of-type(2) {
-    width: 16rem;
+  width: 16rem;
 }
 @media (min-width: 80rem) {
+  header > div:nth-of-type(2) img:nth-of-type(2) {
+    width: 25rem;
+    filter: invert(1);
+    margin-top: 2.06rem;
+    position: absolute;
+    bottom: 16rem;
+    right: 3.25rem;
+  }
+  @media (min-height: 56.31rem) {
     header > div:nth-of-type(2) img:nth-of-type(2) {
-        width: 25rem;
-        filter: invert(1);
-        margin-top: 2.06rem;
+      bottom: 32.13rem;
+      right: 1.5rem;
     }
+  }
 }
 
 
 /* main */
 ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color: black;
-    justify-content: space-between;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: space-between;
+}
+@media (min-width:80rem){
+  ul {
+    width: 37.5rem;
+    background-color: white;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+  }
+  @media (min-height:56.31rem) {
+    ul {
+      width: 18.75rem;
+    }
+  }
 }
 
 li {
-    color: white;
-    width: calc(100vw / 5.2);
-    height: calc(100vw / 5.1);
+  color: white;
+  width: calc(100vw / 5.2);
+  height: calc(100vw / 5.1);
+  transition: ease-in 0.1s;
 }
 @media (min-width:48rem){
+  li {
+      width: calc(100vw / 10.3);
+      height: calc(100vw / 10.1);
+  }
+}
+@media (min-width:80rem){
+  li {
+      width: 7.5rem;
+      height: 6rem;
+      color: inherit;
+  }
+  @media (min-height:56.31rem) {
     li {
-        width: calc(100vw / 10.3);
-        height: calc(100vw / 10.1);
+      width: 9.37rem;
+      height: 5.63rem;
     }
+  }
 }
 
+
 li:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
+}
+@media (min-width:80rem){
+li:hover {
+  background-color: black;
+  color: white;
+}
 }
 
 li > a {
-    text-decoration: none;
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 li > a > span {
-    text-align: center;
-    font-size: 1.13rem;
-    line-height: 1.4;
+  text-align: center;
+  font-size: 1.13rem;
+  line-height: 1.4;
 }
 @media (min-width:36rem){
-    li > a > span {
-        font-size: 1.63rem;
-        line-height: 1.7;
-    }
+  li > a > span {
+      font-size: 1.63rem;
+      line-height: 1.7;
+  }
 }
 
 li > a > span:first-of-type {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 li > a > span:nth-of-type(2) {
-    font-size: 0.82rem;
+  font-size: 0.82rem;
 }
 @media (min-width:36rem){
-    li > a > span:nth-of-type(2) {
-        font-size: 1.13rem;
-    }
+  li > a > span:nth-of-type(2) {
+      font-size: 1.13rem;
+  }
 }
 
 
 /* footer */
-footer.container {
-    max-width: 80rem;;
+footer .container {
+  max-width: 77rem;;
 }
 
 form.container {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 @media (min-width:36rem){
-    form.container {
-        margin-bottom: 5rem;
-    }
+  form.container {
+      margin-bottom: 5rem;
+  }
 }
 
 footer > div:first-of-type, form.container {
-    max-width: 47rem;
+  max-width: 47rem;
 }
 @media (min-width:64rem) {
-    footer > div:first-of-type, form.container {
-        max-width: 50rem;
-    }
+  footer > div:first-of-type, form.container {
+      max-width: 50rem;
+  }
 }
 
 @media (min-width:36rem){
-    footer > form section {
-        flex-direction: row;
-        gap: 0;
-    }
+  footer > form section {
+      flex-direction: row;
+      gap: 0;
+  }
 }
 
 footer > form section > * {
-    height: 3.5rem;
+  height: 3.5rem;
 }
 
 label {
-    margin-bottom: .38rem;
-    line-height: 1.65;
-    font-size: 1rem;
+  margin-bottom: .38rem;
+  line-height: 1.65;
+  font-size: 1rem;
 }@media (min-width:48rem){
-    label {
-        font-size: 1.06rem;
-    }
+  label {
+      font-size: 1.06rem;
+  }
 }
 
 input[type="email"] {
-    width: 100%;
-    background-color: #e9e9e9;
-    border: 0;
-    margin: 0;
-    padding: 0 1rem;
-    font-size: 1.13rem;
+  width: 100%;
+  background-color: #e9e9e9;
+  border: 0;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 1.13rem;
 }
 
 input[type="email"]:focus-visible {
-    outline: 2px dotted red;
-    outline-offset: -2px;
+  outline: 2px dotted red;
+  outline-offset: -2px;
 }
 
 input[type="submit"] {
-    font-size: 1.2rem;
-    width: fit-content;
-    padding: 0.94rem 1.88rem;
-    background-color: black;
-    color: white;
-    border: 0.19rem solid black;
-    transition: ease-in 0.2s;
+  font-size: 1.2rem;
+  width: fit-content;
+  padding: 0.94rem 1.88rem;
+  background-color: black;
+  color: white;
+  border: 0.19rem solid black;
+  transition: ease-in 0.2s;
 }
 
 input[type="submit"]:hover {
-    border: 3px solid black;
-    color: black;
-    background-color: white;
+  border: 3px solid black;
+  color: black;
+  background-color: white;
 }
 
 footer > div:nth-of-type(2) {
-    background-size: cover;
-    background-image: url("../media/img/header_01.jpg");
-    background-repeat: no-repeat;
-    background-color: black;
-    background-position: 40% center;
-    color: white;
-    max-width: 100%;
-    height: 27.5rem;
+  background-size: cover;
+  background-image: url("../media/img/header_01.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: 40% center;
+  color: white;
+  max-width: 100%;
+  height: 27.5rem;
 }
 
 @media (min-width:80rem){
-    footer > div:nth-of-type(2) {
-        height: 40rem;
-        background-position-x: -40%;
-    }
+  footer > div:nth-of-type(2) {
+      height: 40rem;
+      background-position-x: -40%;
+  }
 }
 
 footer .logo {
-    padding: 2.25rem;
-    background-color: white;
+  padding: 2.25rem;
+  background-color: white;
 }
 
 footer > div:nth-of-type(2) > div p {
-    margin: 7rem 0 3rem 0;
-    line-height: 1.88rem;
-    font-weight: bold;
-    font-size: 1.25rem;
-    max-width: 29rem;
+  margin: 7rem 0 3rem 0;
+  line-height: 1.88rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  max-width: 29rem;
 }
 @media (min-width:48rem){
-    footer > div:nth-of-type(2) > div p {
-        font-size: 1.5rem;
-        margin-top: 5rem;
-    }
+  footer > div:nth-of-type(2) > div p {
+      font-size: 1.5rem;
+      margin-top: 5rem;
+  }
 }
 @media (min-width:80rem){
-    footer > div:nth-of-type(2) > div p {
-        font-size: 1.88rem;
-        margin-top: 7.6rem;
-        line-height: 1.36;
-        font-weight: normal;
-        margin-bottom: 2.5rem;
-    }
+  footer > div:nth-of-type(2) > div p {
+      font-size: 1.88rem;
+      margin-top: 7.6rem;
+      line-height: 1.36;
+      font-weight: normal;
+      margin-bottom: 2.5rem;
+  }
 }
 
 footer > div:nth-of-type(2) section{
-    margin-top: 0;
-    flex-direction: row;
-    gap: 0.7rem;
+  margin-top: 0;
+  flex-direction: row;
+  gap: 0.7rem;
 }
 
 footer section > a {
-    color: transparent;
+  color: transparent;
 }
 
 footer section > a img {
-    background: white;
-    border-radius: 2rem;
-    width: 2.5rem;
+  background: white;
+  border-radius: 2rem;
+  width: 2.5rem;
 }
