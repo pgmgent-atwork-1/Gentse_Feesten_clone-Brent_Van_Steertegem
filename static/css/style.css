@@ -135,7 +135,7 @@ section.logo img {
 }
 
 @media (min-width: 80rem) {
-  header > div div:nth-of-type(2) {
+  header > div:nth-of-type(2) {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -297,11 +297,23 @@ main {
 }
 
 main ul {
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #events_home > li {
   margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 0 0.75rem;
+}
+@media (min-width: 48rem) {
+  #events_home > li {
+    max-width: calc(50% - 1.5rem);
+  }
+}
+@media (min-width: 64rem) {
+  #events_home > li {
+    max-width: calc(33.33% - 1.5rem);
+  }
 }
 
 #events_home > li > a {
@@ -309,18 +321,29 @@ main ul {
 }
 
 #events_home > li > a > div:first-of-type {
-  height: 54vw;
+  height: 56vw;
   width: 100%;
   background-size: 100%;
-  margin-bottom: -0.8rem;
+  margin-bottom: -0.9rem;
   background-position: center;
+  background-repeat: no-repeat;
   transition: ease-in-out 0.3s;
+}
+@media (min-width: 48rem) {
+  #events_home > li > a > div:first-of-type {
+    height: 18.4vw;
+  }
 }
 
 #events_home > li > a:hover > div:first-of-type {
   background-size: 105%;
-  height: 55vw;
-  margin-bottom: calc(-0.8rem - 1vw);
+  height: 57vw;
+  margin-bottom: calc(-0.9rem - 1vw);
+}
+@media (min-width: 48rem) {
+  #events_home > li > a:hover > div:first-of-type {
+    height: 19.4vw;
+  }
 }
 
 #events_home > li > a > div:last-of-type {
@@ -338,11 +361,12 @@ main ul {
 #events_home > li > a h2 {
   font-size: 1.5rem;
   margin: 0;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
 }
 
 #events_home > li > a span:last-of-type {
   font-size: 1.13rem;
+  line-height: 2.11;
 }
 
 
