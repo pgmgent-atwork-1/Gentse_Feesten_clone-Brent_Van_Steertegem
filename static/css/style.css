@@ -38,6 +38,15 @@ section {
   gap: 1.25rem;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 h1 {
   font-size: 1.88rem;
   line-height: 1.5;
@@ -126,7 +135,7 @@ section.logo img {
 }
 
 @media (min-width: 80rem) {
-  header > div:nth-of-type(2) {
+  header > div div:nth-of-type(2) {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -192,20 +201,12 @@ header > div:nth-of-type(2) img:nth-of-type(2) {
   }
 }
 
-
-/* main */
-ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  flex-wrap: wrap;
+header ul{
   background-color: black;
   justify-content: space-between;
 }
 @media (min-width:80rem){
-  ul {
+  header ul{
     width: 37.5rem;
     background-color: white;
     position: absolute;
@@ -213,51 +214,50 @@ ul {
     right: 0;
   }
   @media (min-height:56.31rem) {
-    ul {
+    header ul{
       width: 18.75rem;
     }
   }
 }
 
-li {
+header li{
   color: white;
   width: calc(100vw / 5.2);
   height: calc(100vw / 5.1);
   transition: ease-in 0.1s;
 }
 @media (min-width:48rem){
-  li {
+  header li{
       width: calc(100vw / 10.3);
       height: calc(100vw / 10.1);
   }
 }
 @media (min-width:80rem){
-  li {
+  header li{
       width: 7.5rem;
       height: 6rem;
       color: inherit;
   }
   @media (min-height:56.31rem) {
-    li {
+    header li{
       width: 9.37rem;
       height: 5.63rem;
     }
   }
 }
 
-
-li:hover {
+header li:hover {
   background-color: white;
   color: black;
 }
 @media (min-width:80rem){
-li:hover {
+header li:hover {
   background-color: black;
   color: white;
 }
 }
 
-li > a {
+header li> a {
   text-decoration: none;
   height: inherit;
   display: flex;
@@ -265,29 +265,84 @@ li > a {
   justify-content: center;
 }
 
-li > a > span {
+header li> a > span {
   text-align: center;
   font-size: 1.13rem;
   line-height: 1.4;
 }
 @media (min-width:36rem){
-  li > a > span {
+  header li> a > span {
       font-size: 1.63rem;
       line-height: 1.7;
   }
 }
 
-li > a > span:first-of-type {
+header li> a > span:first-of-type {
   font-weight: bold;
 }
 
-li > a > span:nth-of-type(2) {
+header li> a > span:nth-of-type(2) {
   font-size: 0.82rem;
 }
 @media (min-width:36rem){
-  li > a > span:nth-of-type(2) {
+  header li> a > span:nth-of-type(2) {
       font-size: 1.13rem;
   }
+}
+
+
+/* main */
+main {
+  margin-top: 3.75rem;
+}
+
+main ul {
+  flex-direction: column;
+}
+
+#events_home > li {
+  margin-bottom: 1.5rem;
+}
+
+#events_home > li > a {
+  text-decoration: none;
+}
+
+#events_home > li > a > div:first-of-type {
+  height: 54vw;
+  width: 100%;
+  background-size: 100%;
+  margin-bottom: -0.8rem;
+  background-position: center;
+  transition: ease-in-out 0.3s;
+}
+
+#events_home > li > a:hover > div:first-of-type {
+  background-size: 105%;
+  height: 55vw;
+  margin-bottom: calc(-0.8rem - 1vw);
+}
+
+#events_home > li > a > div:last-of-type {
+  margin-left: 2.5rem;
+}
+
+#events_home > li > a span:first-of-type {
+  font-size: 1.63rem;
+  line-height: 2rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+#events_home > li > a h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-top: 1.25rem;
+}
+
+#events_home > li > a span:last-of-type {
+  font-size: 1.13rem;
 }
 
 
@@ -336,7 +391,7 @@ label {
 }
 
 input[type="email"] {
-  width: 100%;
+  width: inherit;
   background-color: #e9e9e9;
   border: 0;
   margin: 0;
