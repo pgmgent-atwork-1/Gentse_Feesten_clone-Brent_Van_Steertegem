@@ -50,6 +50,8 @@ const loadEvents = async() => {
   for (event of events) {
     if (event.image) {
       document.querySelector(`[data-id='${event.id}']`).style.backgroundImage = `url("${event.image.full}")`;
+    } else {
+      document.querySelector(`[data-id='${event.id}']`).style.backgroundImage = 'url("https://data.stad.gent/explore/dataset/gentse-feesten-evenementen-2019/files/8661c545d6f9da58e13a9fcd6b8aab9c/300/")';
     }
   }
 }
@@ -63,16 +65,23 @@ const loadNews = async() => {
   const news = await getNews();
   console.log(news);
   this.$news.innerHTML = news.map((article) => `
-    <li>
-      <a href="#">
-      <div data-id="${article.id}"></div>
-      ${article.title}
-      </a>
-    </li>
+  <li>
+  <a href="#">
+    <div data-id="${article.id}"></div>
+    <div>
+      <span>${new Date(article.publishedAt).getDate() < 10 ? `0${new Date(article.publishedAt).getDate()}` : new Date(article.publishedAt).getDate()}/07</span>
+      <h2>${article.title}</h2>
+      <p>${article.synopsis}</p>
+      <img src="static/media/img/icons/arrow-right.svg" alt="arrow right" />
+    </div>
+  </a>
+</li>
   `).join('');
   for (article of news) {
     if (article.picture) {
       document.querySelector(`[data-id='${article.id}']`).style.backgroundImage = `url("https://www.pgm.gent/data/gentsefeesten/${article.picture.medium}")`;
+    } else {
+      //document.querySelector(`[data-id='${article.id}']`).style.backgroundImage = 'static/media/logo.png';
     }
   }
 }
