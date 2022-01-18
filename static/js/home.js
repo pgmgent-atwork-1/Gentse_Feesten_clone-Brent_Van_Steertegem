@@ -67,9 +67,10 @@ const loadNews = async() => {
   this.$news.innerHTML = news.map((article) => `
   <li>
   <a href="#">
-    <div data-id="${article.id}"></div>
-    <div>
+    <div data-id="${article.id}">
       <span>${new Date(article.publishedAt).getDate() < 10 ? `0${new Date(article.publishedAt).getDate()}` : new Date(article.publishedAt).getDate()}/07</span>
+    </div>
+    <div>
       <h2>${article.title}</h2>
       <p>${article.synopsis}</p>
       <img src="static/media/img/icons/arrow-right.svg" alt="arrow right" />
