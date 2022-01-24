@@ -35,6 +35,7 @@
 @media (min-width: 62.88rem) {
   #events_home > li > a > div:first-of-type {
     height: 18.8vw;
+    max-height: 23rem;
   }
 }
 

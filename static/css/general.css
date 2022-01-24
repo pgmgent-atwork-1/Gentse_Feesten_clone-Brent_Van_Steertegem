@@ -122,12 +122,21 @@ header > div:first-of-type {
   header > div:first-of-type {
       position: relative;
       height: 90vh;
+      max-height: 55rem;
   }
 }
 
 header section.logo, header .container {
-  margin: 0;
   padding: 1.5rem;
+}
+
+header section.logo {
+  margin: 0 auto;
+  width: 87.5rem;
+}
+
+header .container {
+  margin: 0;
 }
 
 section.logo img {
@@ -138,7 +147,7 @@ section.logo img {
   header > div:nth-of-type(2) {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: calc(calc(100% - 87.5rem) / 2);
   }
 }
 
@@ -211,7 +220,7 @@ header ul{
     background-color: white;
     position: absolute;
     bottom: 2.5rem;
-    right: 0;
+    right: calc(calc(100% - 87.5rem) / 2);
   }
   @media (min-height:56.31rem) {
     header ul{
@@ -346,7 +355,8 @@ label {
 }
 
 input[type="email"] {
-  width: inherit;
+  width: 100%;
+  max-width: calc(100% - 2rem);
   background-color: #e9e9e9;
   border: 0;
   margin: 0;
