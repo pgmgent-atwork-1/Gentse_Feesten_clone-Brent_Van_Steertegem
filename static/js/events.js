@@ -1,4 +1,4 @@
-const fillEventspage = async() => {
+const fillEventsPage = async() => {
   this.eventApi = new EventApi();
 
   cacheElements();
@@ -73,7 +73,7 @@ const loadEventsTeaser = async() => {
   const events = await getRandomEvents();
   this.$eventsTeaser.innerHTML = events.map((event) => `
     <li class="event_item">
-      <a href="#">
+      <a href="evenementen/detail.html?day=${this.day}&slug=${event.slug}">
         <div data-id="${event.id}"></div>
         <div>
           <span>${event.start.replace(':','.')} u.</span>
@@ -92,22 +92,19 @@ const loadEventsTeaser = async() => {
   }
 }
 
+this.getCategories = async () => { 
+  try {
+    const response = await fetch("https://www.pgm.gent/data/gentsefeesten/categories.json");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log('An error occured!', error);
+  }
+};
 
 const loadCategories = async() => {
-  const events = await getEventsForDay();
-  const categories = [];
-  for (event of events) {
-    for (ev of event.category) {
-      if (!categories.includes(ev)) {
-        categories.push(ev)
-      }
-    }
-  }
-  this.$categories.innerHTML = categories.sort((a,b) => {
-    if (a < b) { return -1 };
-    if (a > b) { return 1 };
-    return 0;
-  }).map(category => `
+  const categories = await getCategories();
+  this.$categories.innerHTML = categories.map(category => `
   <li>
     <a href="evenementen/dag.html?day=${this.day}#${category.toLowerCase().replaceAll("/", "_").replaceAll(" ", "_").replaceAll(">", "").replaceAll("'", "").replaceAll(",", "_").replaceAll("__", "_")}">${category}</a>
   </li>
@@ -116,19 +113,8 @@ const loadCategories = async() => {
 
 const loadEvents = async () => {
   const events = await getEventsForDay();
-  const categories = [];
-  for (event of events) {
-    for (ev of event.category) {
-      if (!categories.includes(ev)) {
-        categories.push(ev)
-      }
-    }
-  }
-  this.$events.innerHTML = categories.sort((a,b) => {
-    if (a < b) { return -1 };
-    if (a > b) { return 1 };
-    return 0;
-  }).map(category => `
+  const categories = await getCategories();
+  this.$events.innerHTML = categories.map(category => `
     <div id="${category.toLowerCase().replaceAll("/", "_").replaceAll(" ", "_").replaceAll(">", "").replaceAll("'", "").replaceAll(",", "_").replaceAll("__", "_")}">
       <section>
         <h2>${category}</h2>
@@ -138,13 +124,9 @@ const loadEvents = async () => {
     </div>    
   `).join('');
   for (category of categories) {
-    document.querySelector(`#${category.toLowerCase().replaceAll("/", "_").replaceAll(" ", "_").replaceAll(">", "").replaceAll("'", "").replaceAll(",", "_").replaceAll("__", "_")}_list`).innerHTML = events.filter(event => event.category.includes(category)).sort((a,b) => {
-      if (a.start < b.start) { return -1 };
-      if (a.start > b.start) { return 1 };
-      return 0;
-    }).map(event => `
+    document.querySelector(`#${category.toLowerCase().replaceAll("/", "_").replaceAll(" ", "_").replaceAll(">", "").replaceAll("'", "").replaceAll(",", "_").replaceAll("__", "_")}_list`).innerHTML = events.filter(event => event.category.includes(category)).map(event => `
     <li class="event_item">
-    <a href="#">
+    <a href="evenementen/detail.html?day=${this.day}&slug=${event.slug}">
       <div data-id="${event.id}"></div>
       <div>
         <span>${event.start.replace(':','.')} u.</span>
@@ -162,4 +144,4 @@ const loadEvents = async () => {
   }
 }
 
-window.addEventListener("load", fillEventspage);
+window.addEventListener("load", fillEventsPage);

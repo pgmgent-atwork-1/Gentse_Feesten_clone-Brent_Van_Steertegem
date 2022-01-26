@@ -3,9 +3,213 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <base href="../" />
+    <link type="text/css" rel="stylesheet" href="static/css/general.css" />
+    <link type="text/css" rel="stylesheet" href="static/css/event_detail.css" />
+    <script type="text/javascript" src="static/js/general.js"></script>
+    <script type="text/javascript" src="static/js/events_service.js"></script>
+    <script type="text/javascript" src="static/js/event_detail.js"></script>
+    <link rel="icon" type="image/svg+xml" href="static/media/img/icons/favicon.svg">
+    <title>Programma | Gentse Feesten 2019</title>
 </head>
-<body>
-
+<body >
+    <header>
+        <div>
+            <section class="logo">
+                <a href="index.html">
+                    <img src="static/media/img/logo.png" alt="Gentse Feesten 2019" />
+                </a> 
+                <div id="menu" >
+                    <button id="toggle_menu"><img id="toggle_menu_img"src="static/media/img/icons/hamburger.svg"/></button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="evenemnten/search.html">Zoeken</a></li>
+                        <li><a href="evenementen/dag.html?day=19">Programma</a></li>
+                        <li><a href="news.html">Nieuws</a></li>
+                        <li><a href="https://mathieuspil.github.io/Gentse-feesten-backup/nl/info.html">Info</a></li>
+                    </ul>
+                </div>
+            </section> 
+        </div>
+        <div class="container">
+            <img src="static/media/img/gf20.svg">
+            <img src="static/media/img/ontdek.svg">
+        </div>
+        <nav>
+            <ul>
+                <li class="day_19">
+                    <a href="evenementen/dag.html?day=19">
+                        <span>Vr</span>
+                        <span>19 Jul</span>
+                    </a>                    
+                </li>
+                <li class="day_20">
+                    <a href="evenementen/dag.html?day=20">
+                        <span>Za</span>
+                        <span>20 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_21">
+                    <a href="evenementen/dag.html?day=21">
+                        <span>Zo</span>
+                        <span>21 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_22">
+                    <a href="evenementen/dag.html?day=22">
+                        <span>Ma</span>
+                        <span>22 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_23">
+                    <a href="evenementen/dag.html?day=23">
+                        <span>Di</span>
+                        <span>23 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_24">
+                    <a href="evenementen/dag.html?day=24">
+                        <span>Wo</span>
+                        <span>24 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_25">
+                    <a href="evenementen/dag.html?day=25">
+                        <span>Do</span>
+                        <span>25 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_26">
+                    <a href="evenementen/dag.html?day=26">
+                        <span>Vr</span>
+                        <span>26 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_27">
+                    <a href="evenementen/dag.html?day=27">
+                        <span>Za</span>
+                        <span>27 Jul</span>
+                    </a>  
+                </li>
+                <li class="day_28">
+                    <a href="evenementen/dag.html?day=28">
+                        <span>Zo</span>
+                        <span>28 Jul</span>
+                    </a>  
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container main">
+            <h1 id="event_title"></h1>
+            <p id="event_time"></p>
+            <img id="event_img" alt="event image" />
+            <p id="event_description"></p>
+            <div>
+                <section>
+                    <span>Website:</span>
+                    <a id="event_url"></a>
+                </section>
+                <section>
+                    <span>Organisator:</span>
+                    <a href="" id="event_organizer"></a>
+                </section>
+                <section>
+                    <span>Categorieën</span>
+                    <div id="event_categories"></div>
+                </section>                   
+            </div>
+            <section>
+                <img src="static/media/img/icons/social-icons/twitter.svg" alt="twitter icon" />
+                <img src="static/media/img/icons/social-icons/facebook.svg" alt="facebook icon" />
+                <img src="static/media/img/icons/social-icons/pinterest.svg" alt="pinterest icon" />
+            </section>
+            <div id='information'>
+                <h2>Informatiepunt + Reservatie</h2>
+                <span>frankdegruyter@telenet.be</span>
+                <span>Twee Dreven</span>
+                <span>9830 sint-martens-latem</span>
+                <a href="">
+                    <span>0476 30 22 12</span>
+                    <img src="static/media/img/icons/phone.svg" alt="phone icon" />
+                </a>
+                <a href="">
+                    <span>frankdegruyter@telenet.be</span>
+                    <img src="static/media/img/icons/envelope.svg" alt="envelope icon" />
+                </a>
+                <a href="">
+                    <span>http://www.frankdegruyterbe</span>
+                    <img src="static/media/img/icons/external-link.svg" alt="external link icon" />
+                </a>
+            </div>
+            <div id="other_events">
+                <h2>Andere evenementen van Frank Degruyter</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <section>
+                                <div>
+                                    <span>10.30 u.</span>
+                                    <span>Ledebergplein</span>
+                                </div>
+                                <span>Op Reis Te Voet!</span>
+                            </section>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <section>
+                                <div>
+                                    <span>19.00 u.</span>
+                                    <span>Ledebergplein</span>
+                                </div>
+                                <span>Op Reis Te Voet!</span>
+                            </section>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h1>Blijf op de hoogte</h1>
+            <p>Abonneer je op de nieuwsbrief van de Gentse Feesten</p>
+            <p>De stad Gent zal de persoonsgegevens die u invult met respect voor uw <a href>privacy</a> behandelen.</p>
+        </div>
+        <form class="container">
+            <label for="mail">E-mailadres</label>
+            <section>
+                <input type="email" name="mail"/>
+                <input type="submit" value="Inschrijven"/>
+            </section>            
+        </form>
+        <div>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="static/media/img/logo.png" alt="Gentse Feesten 2019" />
+                    </a> 
+                </div>                               
+                <p>Volg de Gentse Feesten op alle sociale media kanalen</p>
+                <section>
+                    <a href="" >
+                        <img src="static/media/img/icons/social-icons/twitter.svg" alt="Twitter" />
+                    </a>
+                    <a href="" >
+                        <img src="static/media/img/icons/social-icons/facebook.svg" alt="Facebook" />
+                    </a>
+                    <a href="" >
+                        <img src="static/media/img/icons/social-icons/flickr.svg" alt="Flickr" />
+                    </a>
+                    <a href="" >
+                        <img src="static/media/img/icons/social-icons/youtube.svg" alt="Youtube" />
+                    </a>
+                </section>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

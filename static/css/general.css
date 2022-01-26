@@ -14,6 +14,10 @@
 }
 
 /* Entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   line-height: 1.75;

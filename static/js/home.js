@@ -37,7 +37,7 @@ const loadEvents = async() => {
   const events = await getEvents();
   this.$events.innerHTML = events.map((event) => `
     <li>
-      <a href="#">
+      <a href="evenementen/detail.html?day=${event.day}&slug=${event.slug}">
         <div data-id="${event.id}"></div>
         <div>
           <span>${event.day_of_week.slice(0, 2)} ${event.day} Jul ${event.start.replace(':','.')} u.</span>
