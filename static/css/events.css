@@ -3,18 +3,24 @@
   background-color: white;
 }
 
+#events ul {
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .event_item {
   margin-bottom: 1.5rem;
   width: 100%;
 }
 @media (min-width: 48rem) {
   .event_item {
-    max-width: calc(50% - 1.5rem);
+    max-width: calc(50% - 0.75rem);
   }
 }
-@media (min-width: 62.88rem) {
+@media (min-width: 64rem) {
   .event_item {
-    max-width: calc(33.33% - 1.5rem);
+    max-width: calc(33.33% - 1rem);
   }
 }
 
@@ -25,6 +31,7 @@
 .event_item > a > div:first-of-type {
   height: 52vw;
   width: 100%;
+  background-image: url("https://data.stad.gent/explore/dataset/gentse-feesten-evenementen-2019/files/8661c545d6f9da58e13a9fcd6b8aab9c/300/");
   background-size: 100%;
   margin-bottom: -0.9rem;
   background-position: center;
@@ -36,7 +43,7 @@
     height: 27.2vw;
   }
 }
-@media (min-width: 62.88rem) {
+@media (min-width: 64rem) {
   .event_item > a > div:first-of-type {
     height: 18.8vw;
     max-height: 23rem;
@@ -54,7 +61,7 @@
     margin-bottom: calc(-0.9rem - 0.7vw);
   }
 }
-@media (min-width: 62.88rem) {
+@media (min-width: 64rem) {
   .event_item > a:hover > div:first-of-type {
     height: 19.3vw;
     margin-bottom: calc(-0.9rem - 0.5vw);
@@ -126,6 +133,71 @@ main > div > section > div > img {
   text-decoration: none;
 }
 
-#events ul {
+#events {
     margin-bottom: 2.5rem;
+}
+
+#events section {
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+#events h2 {
+  font-size: 1.5rem;
+  margin: 1.7rem 0 0rem 0;
+}
+@media (min-width: 48rem) {
+  #events h2 {
+    font-size: 1.63rem;
+  }
+
+  #events > div > section > h2 {
+    font-size: 1.88rem;
+  }
+}
+@media (min-width: 80rem) {
+  #events > div > section > h2 {
+    font-size: 3.75rem;
+  }
+}
+
+#events section img {
+  width: 1.38rem;
+  margin-bottom: -0.2rem;
+}
+
+#search_events {
+  background-color: black;
+  color: white;
+}
+
+#search_events > div {
+  margin: 0 1.5rem 6.5rem 1.5rem;
+  max-width: 50rem;
+}
+@media(min-width: 64rem) {
+  #search_events > div {
+    margin: 0 auto 6.5rem auto;
+  }
+}
+
+#search_events h2 {
+  font-size: 1.5rem;
+  padding-top: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+#search_events input {
+  padding: 1rem;
+  margin-bottom: 6.5rem;
+  height: 3.5rem;
+  font-size: 1.13rem;
+  width: calc(100% - 7.5rem);
+}
+
+#search_events p {
+    font-size: 1.13rem;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
 }

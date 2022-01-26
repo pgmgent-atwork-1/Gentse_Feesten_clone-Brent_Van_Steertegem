@@ -158,8 +158,6 @@ const loadEvents = async () => {
   for (event of events) {
     if (event.image) {
       document.querySelector(`[data-id='${event.id}']`).style.backgroundImage = `url("${event.image.full}")`;
-    } else {
-      document.querySelector(`[data-id='${event.id}']`).style.backgroundImage = 'url("https://data.stad.gent/explore/dataset/gentse-feesten-evenementen-2019/files/8661c545d6f9da58e13a9fcd6b8aab9c/300/")';
     }
   }
 }
