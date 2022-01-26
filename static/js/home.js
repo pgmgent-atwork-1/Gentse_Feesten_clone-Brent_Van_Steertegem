@@ -82,7 +82,7 @@ const loadNews = async() => {
     if (article.picture) {
       document.querySelector(`[data-id='${article.id}']`).style.backgroundImage = `url("https://www.pgm.gent/data/gentsefeesten/${article.picture.medium}")`;
     } else {
-      //document.querySelector(`[data-id='${article.id}']`).style.backgroundImage = 'static/media/logo.png';
+      document.querySelector(`[data-id='${article.id}']`).style.backgroundImage = 'static/media/logo.png';
     }
   }
 }

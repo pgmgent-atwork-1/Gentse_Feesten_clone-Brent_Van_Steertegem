@@ -1,3 +1,4 @@
+/* Event items */
 #events_home > li {
   margin-bottom: 1.5rem;
   width: 100%;
@@ -81,6 +82,8 @@
   line-height: 2.11;
 }
 
+
+/* News items */
 #news_home {
   margin-top: 3.25rem;
   display: block;
@@ -209,6 +212,8 @@
   height: 1.25rem;
 }
 
+
+/* Button to view all news articles */
 main > div > a {
   font-size: 1.18rem;
   text-decoration: none;

@@ -158,8 +158,13 @@ section.logo img {
   width: fit-content;
   height: fit-content;
   background: none;
-  padding: 0;
+  padding: 0 0.4rem;
   border: 0;
+}
+
+#toggle_menu:active {
+  outline: 2px dotted red;
+  outline-offset: -0.3rem;
 }
 
 #toggle_menu_img {
@@ -171,6 +176,10 @@ section.logo img {
 
 #menu ul {
   margin-top: -10rem;
+}
+
+#menu a {
+  text-decoration: none;
 }
 
 #menu.opened ul {
@@ -190,9 +199,10 @@ section.logo img {
 
 .opened #toggle_menu_img {
   height: 3.63rem;
+  padding: 0 0.2rem;
   position: absolute;
-  right: 0.4rem;
-  top: 0rem;
+  right: 0.2rem;
+  top: 0.1rem;
   transition: 0.3s;
 }
 @media (min-width: 87.5rem){
@@ -200,6 +210,11 @@ section.logo img {
     right: calc(calc(100vw - 87.5rem) / 2);
     top: 1.25rem;
   }
+}
+
+.opened #toggle_menu:active #toggle_menu_img {
+  outline: 2px dotted cyan;
+  transition: none;
 }
 
 .opened #toggle_menu_img:hover {
