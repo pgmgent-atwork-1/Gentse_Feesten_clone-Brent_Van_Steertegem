@@ -41,3 +41,91 @@ main button img{
 main button:hover img {
   filter: none;
 }
+
+#found_events {
+  gap: 1.5rem;
+}
+
+/* Event item */
+.event_item {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+@media (min-width: 48rem) {
+  .event_item {
+    max-width: calc(50% - 0.75rem);
+  }
+}
+@media (min-width: 64rem) {
+  .event_item {
+    max-width: calc(33.33% - 1rem);
+  }
+}
+
+.event_item > a {
+  text-decoration: none;
+}
+
+.event_item > a > div:first-of-type {
+  height: 52vw;
+  width: 100%;
+  background-image: url("https://data.stad.gent/explore/dataset/gentse-feesten-evenementen-2019/files/8661c545d6f9da58e13a9fcd6b8aab9c/300/");
+  background-size: 100%;
+  margin-bottom: -0.9rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: ease-in-out 0.3s;
+}
+@media (min-width: 48rem) {
+  .event_item > a > div:first-of-type {
+    height: 27.2vw;
+  }
+}
+@media (min-width: 64rem) {
+  .event_item > a > div:first-of-type {
+    height: 18.8vw;
+    max-height: 23rem;
+  }
+}
+
+.event_item > a:hover > div:first-of-type {
+  background-size: 105%;
+  height: 53vw;
+  margin-bottom: calc(-0.9rem - 1vw);
+}
+@media (min-width: 48rem) {
+  .event_item > a:hover > div:first-of-type {
+    height: 27.9vw;
+    margin-bottom: calc(-0.9rem - 0.7vw);
+  }
+}
+@media (min-width: 64rem) {
+  .event_item > a:hover > div:first-of-type {
+    height: 19.3vw;
+    margin-bottom: calc(-0.9rem - 0.5vw);
+  }
+}
+
+.event_item > a > div:last-of-type {
+  margin-left: 2.5rem;
+}
+
+.event_item > a span:first-of-type {
+  font-size: 1.63rem;
+  line-height: 2rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.event_item > a h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-top: 1.75rem;
+  line-height: 1.5;
+}
+
+.event_item > a span:last-of-type {
+  font-size: 1.13rem;
+  line-height: 2.11;
+}
