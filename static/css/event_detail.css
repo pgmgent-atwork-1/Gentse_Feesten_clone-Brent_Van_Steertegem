@@ -70,9 +70,16 @@ main section:last-of-type img {
 #other_events li {
   background-color: black;
   color: white;
+  border: 3px solid black;
   padding: 1.3rem 2rem;
   margin-bottom: 1.5rem;
   width: 100%;
+  transition: ease-in-out 0.2s;
+}
+
+#other_events li:hover {
+  background-color: white;
+  color: black;
 }
 
 #other_events li a {
@@ -113,6 +120,12 @@ main section:last-of-type img {
   padding: 1.25rem 3.13rem;
   border: 3px solid black;
   text-align: center;
+  transition: ease-in-out 0.2s;
+}
+
+#other_events > div:last-of-type:hover {
+ background-color: black;
+ color: white;
 }
 
 #other_events > div > a {

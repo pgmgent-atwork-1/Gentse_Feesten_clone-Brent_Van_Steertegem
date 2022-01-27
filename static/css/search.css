@@ -1,0 +1,43 @@
+main form {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin-bottom: 6.5rem;
+}
+main input[type="text"] {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1.25rem;
+  border: 0;
+  background: #e9e9e9;
+  font-size: 0.94rem;
+  line-height: 1.13rem;
+  height: 3.5rem;
+}
+
+main input[type="text"]:focus-visible {
+  border: 0;
+  outline: 2px dotted red;
+  outline-offset: -2px;
+}
+
+main button{
+  width: 5rem;
+  height: 3.5rem;
+  border: 3px solid black;
+  background: black;
+  transition: ease-in-out 0.2s;
+}
+
+main button:hover {
+  background: white;
+}
+
+main button img{
+  width: 1.5rem;
+  filter: invert(1);
+}
+
+main button:hover img {
+  filter: none;
+}
